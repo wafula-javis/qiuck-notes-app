@@ -1,0 +1,177 @@
+/* style.css */
+ 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+ 
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f4f4;
+  color: #222;
+  line-height: 1.5;
+}
+ 
+header {
+  background-color: #2c3e50;
+  color: white;
+  padding: 24px 16px;
+  text-align: center;
+}
+ 
+header h1 {
+  margin: 0 0 8px 0;
+}
+ 
+main {
+  max-width: 700px;
+  margin: 32px auto;
+  padding: 0 16px;
+}
+ 
+main section {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  margin-bottom: 24px;
+}
+ 
+footer {
+  text-align: center;
+  padding: 16px;
+  color: #666;
+  font-size: 0.9rem;
+}
+ 
+/* Form laid out with Flexbox */
+#note-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: flex-end;
+}
+ 
+#note-form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 4px;
+  font-size: 0.9rem;
+}
+ 
+#note-form input,
+#note-form select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+ 
+#note-input {
+  flex: 1 1 200px;
+}
+ 
+button {
+  padding: 8px 16px;
+  background-color: #2c3e50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+ 
+button:hover {
+  background-color: #1a252f;
+}
+ 
+#error-message {
+  color: #c0392b;
+  margin-top: 8px;
+  min-height: 1.2em;
+}
+ 
+#search-input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+ 
+#clear-all-btn {
+  background-color: #7f8c8d;
+  margin-bottom: 12px;
+}
+ 
+#clear-all-btn:hover {
+  background-color: #636e70;
+}
+ 
+#note-count {
+  color: #555;
+  margin-bottom: 12px;
+}
+ 
+#notes-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+ 
+/* Each note as a card */
+.note-card {
+  padding: 12px 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  border-left-width: 6px;
+  border-left-style: solid;
+}
+ 
+.note-card .note-category {
+  display: inline-block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #555;
+  margin-right: 8px;
+}
+ 
+.note-card .note-date {
+  font-size: 0.8rem;
+  color: #888;
+}
+ 
+.note-card button {
+  margin-top: 8px;
+  background-color: #c0392b;
+}
+ 
+.note-card button:hover {
+  background-color: #922b21;
+}
+ 
+/* Category colours - left border, using classes as required */
+.category-personal {
+  border-left-color: teal;
+}
+ 
+.category-work {
+  border-left-color: darkred;
+}
+ 
+.category-study {
+  border-left-color: blue;
+}
+ 
+/* Responsive: stack form controls vertically on small screens */
+@media (max-width: 600px) {
+  #note-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}git 
